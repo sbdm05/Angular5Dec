@@ -1,2 +1,34 @@
-<p>page-list-orders works!</p>
-<!-- utiliser le composant btn -->
+<table class="table">
+  <!-- thead utile pour le référencement -->
+  <thead>
+    <!-- table row (ligne) -->
+    <tr>
+      <!--   table header cells (th) -->
+      <!-- créer tableau avec les entrées -->
+      <th scope="col" *ngFor='let item of headers'>{{ item }}</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <!-- tr = table row -->
+    <tr *ngFor='let obj of collection '>
+      <!--  table data cells (td)-->
+      <td>Editer</td>
+      <td>{{obj.typePresta | uppercase}}</td>
+      <td>{{obj.client}}</td>
+      <td>{{obj.nbJours}}</td>
+      <td>{{obj.tjmHt}}</td>
+      <!-- <td>{{ obj | total :arg2 :arg3}}</td> -->
+      <td>{{ obj.tjmHt | total :obj.nbJours | currency }}</td>
+      <td>{{ obj.tjmHt | total :obj.nbJours :obj.tva }}</td>
+      <td>{{obj.state}}</td>
+    </tr>
+  </tbody>
+  <!-- utilise le bouton créé dans SharedModule -->
+  <app-btn
+  label='Ajouter'
+  route='/orders/add'
+  styleBtn='btn btn-danger'
+  >
+  </app-btn>
+</table>

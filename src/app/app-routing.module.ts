@@ -6,6 +6,8 @@ import { PageListOrdersComponent } from './orders/pages/page-list-orders/page-li
 import { PageNotFoundComponent } from './page-not-found/pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  // routes = composant
+
   // définir des routes
   { path: '', redirectTo: 'orders', pathMatch: 'full' },
   // wildcard = page 404
@@ -25,6 +27,6 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
   constructor(private router: Router){
-    console.log(this.router.config, 'tableau de routes')
+    // console.log(this.router.config, 'tableau de routes')
   }
 }
