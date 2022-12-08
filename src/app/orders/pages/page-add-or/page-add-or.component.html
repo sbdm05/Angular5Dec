@@ -3,4 +3,9 @@
   <!-- est-ce qu'on crée le form ici ? -->
   <!-- on créé un component form -->
   <!-- Shared ??? -->
+  <app-form-order
+  [init]='item'
+  (submitted)='onAdd($event)'
+  ></app-form-order>
+
 </div>

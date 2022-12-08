@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from '../../services/orders.service';
 
@@ -22,7 +23,7 @@ export class PageListOrdersComponent implements OnInit {
     'State',
   ];
 
-  constructor(private ordersService: OrdersService) {
+  constructor(private ordersService: OrdersService, private router: Router) {
     // déclencher l'appel http + afficher le résultat dans la page
     this.ordersService.collection.subscribe((data) => {
       // console.log(data);
@@ -39,5 +40,9 @@ export class PageListOrdersComponent implements OnInit {
   //   return val * coef;
   // }
 
-
+  public goToEdit(id: number) {
+    console.log(id, 'cliqué');
+    // redirection
+    this.router.navigate(['orders', 'edit', id]);
+  }
 }

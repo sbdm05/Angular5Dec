@@ -17,11 +17,13 @@ export class BtnComponent implements OnInit {
   }
 
   // HOOKS = accroche
+  // déclenché une seule fois
   ngOnInit(): void {
     //console.log(this.label); // ??? ajouter ?
     //console.log(this.route); // ??? ajouter ?
   }
 
+  // déclenchée plusieurs fois
   ngOnChanges(){
     //console.log(this.label); // ??? ajouter ?
     // console.log(this.route); // ??? ajouter ?

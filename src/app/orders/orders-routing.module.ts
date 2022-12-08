@@ -10,7 +10,7 @@ import { TestComponent } from './pages/test/test.component';
 const routes: Routes = [
   { path: 'orders', component: PageListOrdersComponent },
   { path: 'orders/add', component: PageAddOrComponent },
-  { path: 'orders/edit', component: PageEditOrdersComponent },
+  { path: 'orders/edit/:id', component: PageEditOrdersComponent },
   { path: 'orders/test', component: TestComponent},
 ];
 

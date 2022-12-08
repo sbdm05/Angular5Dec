@@ -13,7 +13,10 @@
     <!-- tr = table row -->
     <tr *ngFor='let obj of collection '>
       <!--  table data cells (td)-->
-      <td>Editer</td>
+      <!-- ajouter événement au clic  -->
+      <!-- dans la fonction on redirige vers orders/edit -->
+
+      <td><button (click)='goToEdit(obj.id)'>Editer</button></td>
       <td>{{obj.typePresta | uppercase}}</td>
       <td>{{obj.client}}</td>
       <td>{{obj.nbJours}}</td>
